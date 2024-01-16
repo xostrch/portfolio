@@ -1,0 +1,422 @@
+/*ALL*/
+@font-face {
+    font-family: 'ROG LyonsType Regular';
+    font-style: normal;
+    font-weight: 99999;
+    src: local('ROG LyonsType Regular'), url('../../font/ROGLyonsTypeRegular3.woff') format('woff');
+    }
+
+*{
+    font-family: 'ROG LyonsType Regular';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background: linear-gradient(to top left,rgb(0, 0, 0),rgb(16, 24, 59)) ;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*BURGER AND LOGO*/
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+}
+
+#logo{
+    width: 10em;
+    transition: transform 0.7s;
+    margin: 2em;
+}
+
+#logo:hover{
+    transform: scale(1.5);
+}
+
+.burger{
+    justify-content: center;
+    text-align: right;
+    align-items: right;
+    width: 50%;
+    display: none;
+}
+
+#burger{
+    width: 3em;
+    margin: 2em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+/*MENU*/
+
+.menu_items{
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    list-style: none;
+}
+
+.menu_links{
+    text-decoration: none;
+    display: inline-block;
+    margin: 3.3vw;
+    transition: transform 0.7s
+}
+
+
+.menu_links:hover{
+    color: #0095FF;
+    transform: scale(1.5);
+    border-bottom: #0095FF solid 2px;
+}
+
+
+/*LANGUAGE BUTTON*/
+
+.switch_lang{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.button_lang{
+    margin: 1em;
+    font-size: 0.9rem;
+    background: transparent;
+    border: #0095FF solid 2px;
+    padding: 0.8em;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button_lang:hover{
+    color: #0095FF;
+    border: #ffffff solid 2px;
+}
+
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.367);
+    width: 100%;
+    height: 4vh;
+    font-size: 0.7rem;
+    margin-top: auto;
+}
+
+.footer_links{
+    margin: 20px;
+    text-decoration: none;
+    color:white
+}
+
+.footer_links:hover{
+    color:#0095FF;
+}
+
+
+/*BOX*/
+
+#aboutme_box{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.aboutme_text{
+    flex: 1;
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 8%;
+}
+
+.aboutme_photo{
+    flex: 1;
+    padding: 8%;
+    width: 50%;
+    text-align: center;
+    padding-top: 6%;
+}
+
+#aboutme_image{
+    max-width: 100%;
+    width: 50em;
+    border-radius: 5%;
+    border: white solid 2px;
+}
+
+.blue{
+    color:#0095FF;
+}
+
+
+
+/*PHONE*/
+@media only screen and (max-width: 767px) {
+    body{
+        background: linear-gradient(to top,rgb(0, 0, 0),rgb(16, 24, 59)) ;
+    }
+
+    .container{
+        height: 9vh;
+    }
+    
+    .menu_items{
+        flex-direction: column;
+        column-gap: 2rem;
+        height: 32vh;
+        justify-content:unset;
+        background-color: #0E1535;
+        position:absolute;
+    }
+    .menu_links{
+        color:#0095FF;
+    }
+    
+    .menu_links:hover{
+        border-bottom: none;
+        transform: none;
+        color: white;
+    }
+
+    .logo{
+        justify-content: left;
+    }
+
+    #logo:hover{
+        transform: none;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    #logo{
+        width: 5em;
+    }
+
+    .switch_lang{
+        margin-top: 0;
+    }
+    
+    .button_lang{
+        font-size: 0.7rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+    
+    .button_lang:hover{
+        color: white;
+        border: #0095FF solid 2px;
+    }
+    
+    footer{
+        font-size: 0.5rem;
+    }
+
+    .footer_links:hover{
+        color: white;
+    }
+
+    .menu-visible {
+        display: block;
+    }
+
+    .menu-hidden {
+        display: none;
+    }
+
+    #aboutme_box{
+        flex-direction: column;
+        margin-top: 5vh
+    }
+    
+    .aboutme_text{
+        width: 80%;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0;
+        margin: auto;
+    }
+    
+    .aboutme_photo{
+        padding: 0;
+        text-align: center;
+        padding-top: 6%;
+        margin: auto;
+    }
+    
+    #aboutme_image{
+        border-radius: 5%;
+        border: none;
+        width: 15em;
+    }
+}
+
+
+/*TABLET*/
+
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+    .menu_links:hover{
+        border-bottom: none;
+        transform: none;
+        color: white;
+    }
+
+    #logo:hover{
+        transform: none;
+    }
+
+    .footer_links:hover{
+        color: white;
+    }
+
+    .switch_lang{
+        margin-top: 3vh;
+    }
+    
+    .button_lang{
+        font-size: 0.7rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+    
+    .button_lang:hover{
+        color: white;
+        border: #0095FF solid 2px;
+    }
+    
+    .aboutme_text{
+        font-size: 1rem;
+    }
+    
+    #aboutme_image{
+        width: 25em;
+    }
+}
+
+/*HD laptop*/
+@media only screen and (min-width: 1200px) and (max-width: 1598px) {
+    .menu_items{
+        font-size: 0.7rem;
+    }
+    
+    .switch_lang{
+        margin-top: 2vh;
+    }
+    
+    .button_lang{
+        font-size: 0.6rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+
+    .aboutme_text{
+        font-size: 0.8rem;
+    }
+    
+    #aboutme_image{
+        width: 25em;
+    }
+}
+
+/*HD+ laptop*/
+@media only screen and (min-width: 1599px) and (max-width: 1800px) {
+
+    .menu_items{
+        font-size: 0.8rem;
+    }
+
+    .switch_lang{
+        margin-top: 2vh;
+    }
+    
+    .button_lang{
+        font-size: 0.7rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+
+    .aboutme_text{
+        font-size: 1.2rem;
+    }
+    
+    #aboutme_image{
+        width: 30em;
+    }
+
+}
+
+/*FULL HD*/
+@media only screen and (min-width: 1801px) and (max-width: 2000px){
+
+    #nick{
+        font-size: 4.9rem;
+        letter-spacing: 0.9rem;
+    }
+    #hi{
+        font-size: 3.5rem;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .oneletter{
+        font-size: 5rem;
+    }
+
+    .switch_lang{
+        margin-top: 2vh;
+    }
+    
+    .button_lang{
+        font-size: 0.8rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+
+    .aboutme_text{
+        font-size: 1.3rem;
+    }
+    
+    #aboutme_image{
+        width: 40em;
+    }
+}
+
+
+
+

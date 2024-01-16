@@ -1,0 +1,454 @@
+/*ALL*/
+@font-face {
+    font-family: 'ROG LyonsType Regular';
+    font-style: normal;
+    font-weight: 99999;
+    src: local('ROG LyonsType Regular'), url('../../font/ROGLyonsTypeRegular3.woff') format('woff');
+    }
+
+*{
+    font-family: 'ROG LyonsType Regular';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background: linear-gradient(to top left,rgb(0, 0, 0),rgb(16, 24, 59)) ;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*BURGER AND LOGO*/
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+}
+
+#logo{
+    width: 10em;
+    transition: transform 0.7s;
+    margin: 2em;
+}
+
+#logo:hover{
+    transform: scale(1.5);
+}
+
+.burger{
+    justify-content: center;
+    text-align: right;
+    align-items: right;
+    width: 50%;
+    display: none;
+}
+
+#burger{
+    width: 3em;
+    margin: 2em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+/*MENU*/
+
+.menu_items{
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    list-style: none;
+}
+
+.menu_links{
+    text-decoration: none;
+    display: inline-block;
+    margin: 3.3vw;
+    transition: transform 0.7s
+}
+
+
+.menu_links:hover{
+    color: #0095FF;
+    transform: scale(1.5);
+    border-bottom: #0095FF solid 2px;
+}
+
+
+/*LANGUAGE BUTTON*/
+
+.switch_lang{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.button_lang{
+    margin: 1em;
+    font-size: 0.9rem;
+    background: transparent;
+    border: #0095FF solid 2px;
+    padding: 0.8em;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button_lang:hover{
+    color: #0095FF;
+    border: #ffffff solid 2px;
+}
+/*HI*/
+
+#hi{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-top: 10vh;
+    transition: transform 0.7s;
+}
+#hi:hover{
+    transform: scale(1.3);
+    color: #0095FF
+}
+
+
+/*NICK*/
+
+#nick{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    font-size: 7rem;
+    letter-spacing: 1.2rem;
+}
+
+.bigger{
+    transition: transform 0.7s;
+}
+
+.bigger:hover{
+    color:#0095FF;
+    transform: scale(1.5);
+}
+
+.oneletter{
+    color:#0095FF;
+    font-size: 8rem;
+    transition: transform 0.7s;
+}
+
+.oneletter:hover{
+    transform: scale(1.5);
+    color: white;
+}
+
+
+/*FOOTER*/
+footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.367);
+    width: 100%;
+    height: 4vh;
+    font-size: 0.7rem;
+    margin-top: auto;
+}
+
+.footer_links{
+    margin: 20px;
+    text-decoration: none;
+    color:white
+}
+
+.footer_links:hover{
+    color:#0095FF;
+}
+
+
+
+
+/*PHONE*/
+@media only screen and (max-width: 767px) {
+    body{
+        background: linear-gradient(to top,rgb(0, 0, 0),rgb(16, 24, 59)) ;
+    }
+
+    .container{
+        height: 9vh;
+    }
+    
+    .menu_items{
+        flex-direction: column;
+        column-gap: 2rem;
+        height: 32vh;
+        justify-content:unset;
+        background-color: #0E1535;
+        position:absolute;
+    }
+    .menu_links{
+        color:#0095FF;
+    }
+    
+    .menu_links:hover{
+        border-bottom: none;
+        transform: none;
+        color: white;
+    }
+
+    .logo{
+        justify-content: left;
+    }
+
+    #logo:hover{
+        transform: none;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    #logo{
+        width: 5em;
+    }
+
+    .switch_lang{
+        margin-top: 0;
+    }
+    
+    .button_lang{
+        font-size: 0.7rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+    
+    .button_lang:hover{
+        color: white;
+        border: #0095FF solid 2px;
+    }
+    
+    #hi{
+        font-size: 1.8rem;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    #hi:hover{
+        transform: none;
+        color: white;
+    }
+
+    #nick{
+        font-size: 2.5rem;
+        letter-spacing: 0;
+    }
+
+    .oneletter{
+        font-size: 2.6rem;
+    }
+
+    .oneletter:hover{
+        transform: none;
+        color:#0095FF
+    }
+
+    .bigger:hover{
+        transform: none;
+        color: white;
+    }
+
+    footer{
+        font-size: 0.5rem;
+    }
+
+    .footer_links:hover{
+        color: white;
+    }
+
+    .menu-visible {
+        display: block;
+    }
+
+    .menu-hidden {
+        display: none;
+    }
+
+}
+
+
+/*TABLET*/
+
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+    .menu_links:hover{
+        border-bottom: none;
+        transform: none;
+        color: white;
+    }
+    #logo:hover{
+        transform: none;
+    }
+    #hi:hover{
+        transform: none;
+        color: white;
+    }
+    .oneletter:hover{
+        transform: none;
+        color:#0095FF
+    }
+    .bigger:hover{
+        transform: none;
+        color: white;
+    }
+    .footer_links:hover{
+        color: white;
+    }
+
+    #nick{
+        font-size: 3.5rem;
+        letter-spacing: 0;
+    }
+
+    .oneletter{
+        font-size: 3.6rem;
+    }
+
+    #hi{
+        font-size: 3.5rem;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .switch_lang{
+        margin-top: 3vh;
+    }
+    
+    .button_lang{
+        font-size: 0.7rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+    
+    .button_lang:hover{
+        color: white;
+        border: #0095FF solid 2px;
+    }
+}
+
+/*HD laptop*/
+@media only screen and (min-width: 1200px) and (max-width: 1598px) {
+    #nick{
+        font-size: 2.5rem;
+        letter-spacing: 0.7rem;
+    }
+    #hi{
+        font-size: 2.5rem;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .oneletter{
+        font-size: 2.6rem;
+    }
+
+    .menu_items{
+        font-size: 0.7rem;
+    }
+    
+    .switch_lang{
+        margin-top: 2vh;
+    }
+    
+    .button_lang{
+        font-size: 0.6rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+}
+
+/*HD+ laptop*/
+@media only screen and (min-width: 1599px) and (max-width: 1800px) {
+    #nick{
+        font-size: 2.9rem;
+        letter-spacing: 0.8rem;
+    }
+    #hi{
+        font-size: 2.5rem;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .oneletter{
+        font-size: 3.0rem;
+    }
+
+    .menu_items{
+        font-size: 0.8rem;
+    }
+
+    .switch_lang{
+        margin-top: 2vh;
+    }
+    
+    .button_lang{
+        font-size: 0.7rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+
+}
+/*FULL HD*/
+@media only screen and (min-width: 1801px) and (max-width: 2000px){
+
+    #nick{
+        font-size: 4.9rem;
+        letter-spacing: 0.9rem;
+    }
+    #hi{
+        font-size: 3.5rem;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .oneletter{
+        font-size: 5rem;
+    }
+
+    .switch_lang{
+        margin-top: 2vh;
+    }
+    
+    .button_lang{
+        font-size: 0.8rem;
+        padding: 0.8em;
+        border-radius: 8px;
+    }
+}
